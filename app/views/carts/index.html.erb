@@ -1,0 +1,22 @@
+<h1>Cart Contents</h1>
+
+<table table class="table table-bordered">
+  <tr>
+    <th>Cart Id</th>
+    <th>List of items</th>
+    <th>Cart Total</th>
+  </tr>
+
+<% @carts.each do |cart| %>
+  <tr>
+    <td><%= cart.id %></td>
+    <td>need to string together list of items</td>
+    <td><%= cart.totalprice %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+<br />
+<%= link_to 'Back', home_index_path %>

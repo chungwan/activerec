@@ -1,0 +1,35 @@
+<h1>List of Items</h1>
+
+<table table class="table table-bordered">
+  <tr>
+    <th>Item Id</th>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Unit Price</th>
+    <th>Num of images</th>
+    <th>List of Image Ids</th>
+    <th>Cart Id</th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.id %></td>
+    <td><%= item.product_id %></td>
+    <td>need to find product name via product id</td>
+    <td>need to find product price via product id</td>    
+    <td><%= item.num_images %></td>
+    <td>need to string together list of image ids</td>
+    <td><%= item.cart_id %></td>
+     <td><%= link_to 'Add to Cart', carts_path %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+
+<br />
+<%= link_to 'New Item', new_item_path %>
+<br />
+<%= link_to 'Back', home_index_path %>
